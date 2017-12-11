@@ -1,0 +1,55 @@
+{
+	"name": "cocos-creator-watch",
+	"displayName": "Cocos Creator Watch",
+	"version": "0.0.1",
+	"publisher": "simon",
+	"description": "ping localhost:7645/update-db when js file modified",
+	"author": {
+		"name": "simon"
+	},
+	"categories": [
+		"Other"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Cocos Creator Watch Configuration",
+			"properties": {
+				"creator.watch.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否啟用"
+				},
+				"creator.watch.port": {
+					"type": "number",
+					"default": 7645,
+					"description": "預設port"
+				},
+				"creator.watch.threshold": {
+					"type": "number",
+					"default": 2000,
+					"description": "存檔到送出update-db中間要等待其他存檔的時間 (防止送出過多update-db)"
+				}
+			}
+		}
+	},
+	"activationEvents": [
+		"onLanguage:javascript"
+	],
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"main": "./out/extension",
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"vscode": "0.10.x",
+		"typescript": "^1.6.2",
+		"lodash.debounce": "^4.0.8"
+	},
+	"dependencies": {
+		"lodash.debounce": "^4.0.8"
+	}
+}
