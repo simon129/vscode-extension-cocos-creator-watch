@@ -28,7 +28,7 @@ export class CreatorWatch {
 
 			http.get(`http://localhost:${port}/update-db`, (res) => {
 			}).on('error', error => {
-				window.showErrorMessage('[Cocos Creator Watch] creator 無回應, port:' + port + ', error:' + error.code);
+				window.showErrorMessage('[Cocos Creator Watch] creator 無回應, port:' + port + ', error:' + error.message);
 			});
 
 			console.log('update-db');

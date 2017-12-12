@@ -25,3 +25,6 @@ export function activate(ctx: ExtensionContext) {
         ctx.subscriptions.push(new CreatorWatch());
     }
 }
+
+export function deactivate() {
+}
