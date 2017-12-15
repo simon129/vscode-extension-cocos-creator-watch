@@ -3,8 +3,6 @@ import { ExtensionContext, workspace, DocumentFilter } from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 
-import { CreatorCompletionItemProvider } from './CreatorCompletionItemProvider'
-import { CreatorDeclaration } from './creatorDeclaration'
 import { CreatorWatch } from './creatorWatch'
 import { isCocosCreatorProjectFolder } from './util';
 
